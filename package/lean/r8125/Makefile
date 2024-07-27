@@ -33,7 +33,7 @@ define Package/r8125/description
 endef
 
 define Build/Compile
-  +$(KERNEL_MAKE) M=$(PKG_BUILD_DIR)/src modules
+	+$(KERNEL_MAKE) M=$(PKG_BUILD_DIR)/src modules
 endef
 
 $(eval $(call KernelPackage,r8125))
