@@ -22,7 +22,6 @@ PKG_MAINTAINER:=Robert Marko <robimarko@gmail.com>
 
 include $(INCLUDE_DIR)/package.mk
 
-=======
 VERSION_PATH=$(PKG_BUILD_DIR)/QCA_Networking_2022.SPF_12.0.0/ED1
 
 define Package/nss-firmware-default

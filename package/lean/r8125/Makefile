@@ -24,8 +24,7 @@ define KernelPackage/r8125
   TITLE:=Driver for Realtek r8125 chipsets
   SUBMENU:=Network Devices
   VERSION:=$(LINUX_VERSION)+$(PKG_VERSION)-$(BOARD)-$(PKG_RELEASE)
-  DEPENDS:=@PCI_SUPPORT +kmod-mii +kmod-phy-realtek
-  FILES:= $(PKG_BUILD_DIR)/r8125.ko
+  FILES:= $(PKG_BUILD_DIR)/src/r8125.ko
   AUTOLOAD:=$(call AutoProbe,r8125)
 endef
 
@@ -34,7 +33,7 @@ define Package/r8125/description
 endef
 
 define Build/Compile
-	$(KERNEL_MAKE) M=$(PKG_BUILD_DIR) modules
+  +$(KERNEL_MAKE) M=$(PKG_BUILD_DIR)/src modules
 endef
 
 $(eval $(call KernelPackage,r8125))

@@ -43,12 +43,3 @@ platform_do_upgrade() {
 		;;
 	esac
 }
-
-platform_copy_config() {
-	case "$(board_name)" in
-	redmi,ax5-jdcloud)
-		emmc_copy_config
-		;;
-	esac
-	return 0;
-}
